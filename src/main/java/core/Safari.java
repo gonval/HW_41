@@ -1,9 +1,9 @@
 package core;
 
-import org.openqa.selenium.*;
-import org.openqa.selenium.safari.*;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
+//import org.openqa.selenium.*;
+//import org.openqa.selenium.safari.*;
+//import org.openqa.selenium.support.ui.ExpectedConditions;
+//import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.concurrent.TimeUnit;
 import java.util.logging.*;
@@ -13,7 +13,7 @@ public class Safari {
 	static WebDriver driver;
 
 	public static boolean isPresent(final By by) {
-		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+		//driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 		if (!driver.findElements(by).isEmpty()) {
 			return true;
 		} else {
@@ -35,9 +35,9 @@ public class Safari {
 		}
 
 		driver = new SafariDriver();
-		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
-		driver.manage().window().maximize();
-		WebDriverWait wait = new WebDriverWait(driver, 15);
+		//driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+		//driver.manage().window().maximize();
+		WebDriverWait wait = new WebDriverWait();
 
 		driver.get(url);
 
